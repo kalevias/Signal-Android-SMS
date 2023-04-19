@@ -17,11 +17,13 @@ Alright, if you're trying to migrate from the official Signal Android app to thi
 Problem: You can't install an unsigned APK over a signed one. This means you can't just download the APK from GitHub and install it, because Android will prevent you from doing this due to reasonable security concerns. There are some ways around this, but I haven't tried this personally, so you're on your own here.
 
 Here's what I did to migrate to this fork of Signal:
+
 1. Build an unsigned APK of this repository.
 2. Create a backup file for all of your chat messages. Remember where this is located on your phone.
 3. Have your Signal PIN and chat backup passphrase on hand.
 
 WARNING: I recommend you try this on a new device first, rather than proceeding to step 4. If you proceed and lose everything, it's on you.
+
 4. Uninstall Signal from your device. (This is the part where you can lose everything)
 5. Download the APK you built earlier to your phone.
 6. Install said APK.
