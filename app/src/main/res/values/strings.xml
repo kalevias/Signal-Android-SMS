@@ -4254,7 +4254,7 @@
     <!-- Dialog action to view contact when they can\'t be removed otherwise -->
     <string name="NewConversationActivity__view_contact">View contact</string>
     <!-- Error message shown when looking up a person by phone number and that phone number is not associated with a signal account -->
-    <string name="NewConversationActivity__s_is_not_a_signal_user">%1$s is not a Signal user</string>
+    <string name="NewConversationActivity__s_is_not_a_signal_user">%1$s is not a Signal user. Try setting Signal as your default SMS application</string>
 
     <!-- ContactFilterView -->
     <string name="ContactFilterView__search_name_or_number">Search name or number</string>
