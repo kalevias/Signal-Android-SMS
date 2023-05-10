@@ -236,7 +236,9 @@ public abstract class MessageRecord extends DisplayRecord {
         throw new AssertionError(e);
       }
     } else if (isSmsExportType()) {
-      return null;
+      int messageResource = SignalStore.misc().getSmsExportPhase().isSmsSupported() ? R.string.MessageRecord__you_will_no_longer_be_able_to_send_sms_messages_from_signal_soon
+                                                                                    : R.string.MessageRecord__you_can_no_longer_send_sms_messages_in_signal;
+      return fromRecipient(getIndividualRecipient(), r -> context.getString(messageResource, r.getDisplayName(context)), R.drawable.ic_update_info_16);
     } else if (isPaymentsRequestToActivate()) {
       return isOutgoing() ? fromRecipient(getIndividualRecipient(), r -> context.getString(R.string.MessageRecord_you_sent_request, r.getShortDisplayName(context)), R.drawable.ic_card_activate_payments)
                           : fromRecipient(getIndividualRecipient(), r -> context.getString(R.string.MessageRecord_wants_you_to_activate_payments, r.getShortDisplayName(context)), R.drawable.ic_card_activate_payments);
